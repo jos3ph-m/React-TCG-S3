@@ -89,7 +89,7 @@ const person = (props) => {
 
 ## State
 
-Whilst props allow you to pass data down the component tree (and hence trigger an UI update), state is used to change the component, well, state from within. Changes to state also trigger an UI update.
+While props allow you to pass data thourgh the component tree, state is used to change the component. Changes to state also trigger an UI update.
 
 Example:
 
@@ -112,3 +112,19 @@ Here, the NewPost component contains state . Only class-based components can def
 state simply is a property of the component class, you have to call it state though - the name is not optional. You can then access it via this.state in your class JSX code (which you return in the required render() method).
 
 Whenever state changes (taught over the next lectures), the component will re-render and reflect the new state. The difference to props is, that this happens within one and the same component - you don't receive new data (props ) from outside!
+
+#### Stateless vs Stateful
+
+It's important and best practice to use as many stateless components (aka dumb/presentational components) as possible rather than stateful components. The idea is to restrict yourself to have as many state-less components when possible, because this makes your app easier to maintain and manage. You have a clear flow of data, and it's much easier for someone else, or you later to come back to the app for maintenance.
+
+**Stateful**
+
+- Smart
+- Container
+- Often containing logic
+
+**Stateless**
+
+- Presentational
+- Dumb
+- Often functional
