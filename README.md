@@ -65,12 +65,22 @@ They have to match!
 Also consider the following:
 
 ```javascript
+<Person name="Shteve" age="43">
+  My Hobbies: Racing
+</Person>
+```
+
+```javascript
 const person = (props) => {
-  const { name, age } = props;
+  const { name, age, children } = props;
   return (
-    <p className="person">
-      my name is: {name} and my age is: {age}
-    </p>
+    <div>
+      <p className="person">
+        I'm {name} and I'm {age}... I'm from the Person component and here I am
+        generating a random number: {Math.floor(Math.random() * 100)}
+      </p>
+      <p>{children}</p>
+    </div>
   );
 };
 ```
