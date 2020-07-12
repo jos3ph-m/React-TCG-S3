@@ -128,3 +128,24 @@ It's important and best practice to use as many stateless components (aka dumb/p
 - Presentational
 - Dumb
 - Often functional
+
+---
+
+## Passing Method References Between Components
+
+You can pass method references like so:
+
+```javascript
+<button onClick={() => this.switchNameHandler("Big Shteve")}>
+          Switch Name
+        </button>
+        <Person
+          name={this.state.persons[0].name}
+          age={this.state.persons[0].age}
+        />
+        <Person
+          name={this.state.persons[1].name}
+          age={this.state.persons[1].age}
+          click={this.switchNameHandler.bind(this, "Mega Shteve")}
+        />
+```
