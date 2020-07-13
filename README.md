@@ -150,6 +150,8 @@ You can pass method references like so:
         />
 ```
 
+---
+
 ## Adding Two Way Binding
 
 Adding two way binding:
@@ -177,4 +179,33 @@ switchNameHandler = (newName) => {
   click={this.switchNameHandler.bind(this, "Mega Shteve")}
   changed={this.nameChangedHandler}
 />
+```
+
+---
+
+## Adding Styling with Stylesheets
+
+Style is easily managed from .css files by importing directly in components:
+
+```css
+.Person {
+  width: 60%;
+  margin: 16px auto;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 3px #ccc;
+  padding: 16px;
+  text-align: center;
+}
+```
+
+From our Person component we import the above stylesheet:
+
+```javascript
+import "./Person.css";
+```
+
+Make sure to use 'className' instead of 'class':
+
+```javascript
+<div className="Person">
 ```

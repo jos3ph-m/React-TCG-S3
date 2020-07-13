@@ -1,0 +1,16 @@
+.User {
+  width: 500px;
+  margin: 50px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #e3e2e3;
+}
+
+.input {
+  width: 25%;
+  height: 20px;
+  margin: 0 auto;
+  font-family: "Roboto Mono", monospace;
+}
