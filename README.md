@@ -149,3 +149,32 @@ You can pass method references like so:
           click={this.switchNameHandler.bind(this, "Mega Shteve")}
         />
 ```
+
+## Adding Two Way Binding
+
+Adding two way binding:
+
+```javascript
+<input type="text" onChange={props.changed} value={props.name} />
+```
+
+```javascript
+switchNameHandler = (newName) => {
+  this.setState({
+    persons: [
+      { name: "Joseph", age: 34 },
+      { name: newName, age: 403 },
+      { name: "Audrillian", age: 30 },
+    ],
+  });
+};
+```
+
+```javascript
+<Person
+  name={this.state.persons[1].name}
+  age={this.state.persons[1].age}
+  click={this.switchNameHandler.bind(this, "Mega Shteve")}
+  changed={this.nameChangedHandler}
+/>
+```
