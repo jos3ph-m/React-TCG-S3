@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@900&family=Inconsolata:wght@300&family=Merriweather:ital@1&display=swap");
+
+.App {
+  text-align: center;
+}
+
+.red {
+  color: red;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.button {
+  background-color: green;
+  color: white;
+  font: inherit;
+  border: 1px solid blue;
+  padding: 8px;
+  cursor: pointer;
+  outline: none;
+}
+
+.button:hover {
+  background-color: lightgreen;
+  color: black;
+}
